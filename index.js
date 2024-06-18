@@ -35,6 +35,11 @@ class AlarmClock {
     const alarm = new Alarm(time, day)
     this.alarms.push(alarm)
     console.log(`Alarm set for ${day} at ${time}`)
+    rl.question("Do you want to repeat Menu? 'yes' Or 'no'", (input) => {
+      if (input == "yes") {
+        this.mainMenu()
+      }
+    })
   }
 
   deleteAlarm(time, day) {
@@ -107,20 +112,23 @@ class AlarmClock {
           this.displayTime()
           break
         case "2":
+          var repeat = true
           rl.question("Enter alarm time (HH:mm): ", (time) => {
             rl.question("Enter day of the week: ", (day) => {
               this.addAlarm(time, day)
             })
           })
+
           break
         case "3":
-          rl.question("Enter the time (HH:MM): ", (time) => {
+          rl.question("Enter the time (HH:MM) in 24H Format: ", (time) => {
             rl.question(`Enter the day:`, (day) => {
               this.deleteAlarm(time, day)
             })
           })
           break
         case "4":
+          console.log("All the active alarms:")
           this.showAlarms()
           break
         case "5":
