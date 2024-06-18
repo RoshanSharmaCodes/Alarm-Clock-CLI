@@ -1,3 +1,4 @@
+<img src="https://socialify.git.ci/RoshanSharmaCodes/Alarm-Clock-CLI/image?language=1&owner=1&name=1&stargazers=1&theme=Light" width="100%" height="300px" />
 <h1 align="center" id="title">Alarm Clock using CLI</h1>
 
 <p id="description">In this project I have implemented alarm clock. As it has been asked in the requirement that the working should be purely based on CLI So I have used "readline" in-built module to successfully complete the project.</p>
