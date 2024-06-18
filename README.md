@@ -33,3 +33,7 @@
 
 <h4>Snooze Alarm</h4>
 <img src="https://github.com/RoshanSharmaCodes/Alarm-Clock-CLI/blob/main/Images/Snooze_Alarm.PNG" alt="project-screenshot" width="300px" height="100%/">
+
+
+<h2>Limitation of Projects</h2>
+<p>Since I have been asked to create the project so that it can be run in CLI. So, I decided to go with inline readline module, and it comes with some limitations. The readline prompt blocks the event loop until it receives input. This can be problematic if you need to perform other asynchronous operations concurrently.</p>
