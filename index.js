@@ -112,10 +112,19 @@ class AlarmClock {
           this.displayTime()
           break
         case "2":
-          var repeat = true
           rl.question("Enter alarm time (HH:mm): ", (time) => {
             rl.question("Enter day of the week: ", (day) => {
-              this.addAlarm(time, day)
+              var days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+              const [hour, min] = time.split(":")
+              if( hour > 24 || hour < 0 || min > 60 || min < 0){
+                    console.log("Invalid Time")
+                    this.mainMenu()
+              } else if (!days.includes(day.toLowerCase())){
+                    console.log("Invalid Day")
+                    this.mainMenu()
+              } else {
+                this.addAlarm(time, day)
+              }
             })
           })
 
